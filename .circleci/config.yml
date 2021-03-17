@@ -1,0 +1,20 @@
+jobs:
+  build:
+    branches:
+      only:
+        - master
+        - staging
+        - dev
+    docker:
+      - image: circleci/node:jessie-browsers
+    steps:
+      - checkout
+      - run:
+          name: Download Selenium
+          command: curl -O http://selenium-release.storage.googleapis.com/3.5/selenium-server-standalone-3.5.3.jar
+      - run:
+          name: Install Project
+          command: npm install
+      - run:
+          name: Run Selenium Test
+          command: npm test
