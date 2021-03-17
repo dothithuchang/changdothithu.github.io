@@ -2,9 +2,7 @@ jobs:
   build:
     branches:
       only:
-        - master
-        - staging
-        - dev
+        - main
     docker:
       - image: circleci/node:jessie-browsers
     steps:
