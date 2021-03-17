@@ -29,5 +29,6 @@ describe('/LOGIN FUNCTION', () => {
         let currentURL = await driver.getCurrentUrl();
         console.log(currentURL);
         assert.equal(currentURL, 'https://viblo.asia/p/selenium-webdriver-va-nodejs-vyDZO7JxZwj');
+    
     });
 })
